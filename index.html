@@ -188,7 +188,7 @@
 
 <section class="sobre" id="sobre">
   <div class="wrap sobre-grid">
-    <div>
+    <div class="sobre-copy">
       <div class="eyebrow">Sobre Entregallos</div>
       <h2 style="font-size:clamp(26px,4vw,38px);">Dos personas aunque a veces no se note.</h2>
       <p>Nuestros juegos tienen identidades propias, pero su espíritu es el mismo: el nuestro. Sería muy difícil hacer lo que hacemos sin compartir un nivel de confianza absurdo, y afortunadamente, el rol nos encontró. Somos igual de pesadxs, igual de apasionadxs, igual de tercxs (vos más Belén), e igual de imparables cuando trabajamos en este proyecto. </p>
@@ -217,7 +217,7 @@
 </section>
 
 <footer>
-  <div class="wrap">
+  <div class="wrap foot-reveal">
     <div class="foot-top">
       <div class="foot-brand">Entregallos & Co</div>
       <div class="foot-links">
@@ -294,19 +294,30 @@
     sections.forEach(function(s){ observer.observe(s); });
   }
 
-  var peopleEls = document.querySelectorAll('.person');
-  if('IntersectionObserver' in window && peopleEls.length){
-    var peopleObserver = new IntersectionObserver(function(entries){
+  // Animación de entrada del hero (se dispara una sola vez al cargar).
+  var heroEl = document.querySelector('.hero');
+  if(heroEl){
+    requestAnimationFrame(function(){
+      requestAnimationFrame(function(){ heroEl.classList.add('loaded'); });
+    });
+  }
+
+  // Scroll-reveal: todo lo que tiene alguna de estas clases aparece con
+  // fade + subida al entrar en pantalla. Para agregar un elemento nuevo
+  // a este efecto, sumale una de estas clases (o agregala a la lista).
+  var revealEls = document.querySelectorAll('.person, .section-head, .mini-card, .game-tile, .banner-strip, .quote-graphic, .sobre-copy, .foot-reveal');
+  if('IntersectionObserver' in window && revealEls.length){
+    var revealObserver = new IntersectionObserver(function(entries){
       entries.forEach(function(entry){
         if(entry.isIntersecting){
           entry.target.classList.add('in-view');
-          peopleObserver.unobserve(entry.target);
+          revealObserver.unobserve(entry.target);
         }
       });
-    }, {threshold:0.25});
-    peopleEls.forEach(function(p){ peopleObserver.observe(p); });
+    }, {threshold:0.2});
+    revealEls.forEach(function(el){ revealObserver.observe(el); });
   } else {
-    peopleEls.forEach(function(p){ p.classList.add('in-view'); });
+    revealEls.forEach(function(el){ el.classList.add('in-view'); });
   }
 
   var fakeCaptcha = document.getElementById('fakeCaptcha');
