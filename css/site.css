@@ -279,6 +279,5 @@
     .sobre-grid{gap:34px;}
     .foot-top{flex-direction:column;gap:16px;}
   }
-  @media (prefers-reduced-motion:reduce){
-    *:not(.jail-overlay):not(.jail-overlay *){animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important;}
-  }
+  /* A propósito no respetamos prefers-reduced-motion: el sitio es liviano
+     y las animaciones son parte del diseño, se muestran siempre. */
