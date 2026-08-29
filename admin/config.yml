@@ -1,0 +1,25 @@
+backend:
+  name: git-gateway
+  branch: main
+
+publish_mode: simple
+media_folder: "img/nido-uploads"
+public_folder: "/img/nido-uploads"
+
+collections:
+  - name: "nido"
+    label: "El Nido"
+    label_singular: "Nota"
+    folder: "content/nido"
+    create: true
+    slug: "{{slug}}"
+    sortable_fields: ["date", "title"]
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Fecha", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, picker_utc: true }
+      - label: "Autor"
+        name: "author"
+        widget: "select"
+        options: ["Eli", "Bel"]
+      - { label: "Resumen (para la tarjeta y para compartir)", name: "summary", widget: "text" }
+      - { label: "Contenido", name: "body", widget: "markdown" }

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{TITLE}} — Entregallos & có (¡có!)</title>
+<meta name="description" content="{{SUMMARY}}">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Entregallos & Co">
+<meta property="og:title" content="{{TITLE}} — Entregallos & Co">
+<meta property="og:description" content="{{SUMMARY}}">
+<meta property="og:url" content="https://entregallos.netlify.app/nido/{{SLUG}}.html">
+<meta property="og:image" content="https://entregallos.netlify.app/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{TITLE}} — Entregallos & Co">
+<meta name="twitter:description" content="{{SUMMARY}}">
+<meta name="twitter:image" content="https://entregallos.netlify.app/img/og-image.png">
+
+<link rel="icon" type="image/x-icon" href="../favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../favicon-180.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600;700&family=Kalam:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/site.css">
+<style>
+  .post-hero{background:var(--ink);border-bottom:3px solid var(--line);padding:56px 0 40px;}
+  .post-hero .eyebrow{color:var(--red-bright);}
+  .post-hero h1{color:#fff;font-size:clamp(28px,4.6vw,44px);margin-top:12px;max-width:22ch;}
+  .post-meta{margin-top:16px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#C9C6BC;display:flex;gap:14px;flex-wrap:wrap;}
+
+  .post-body{max-width:680px;margin:0 auto;padding:0 24px;}
+  .post-body p{font-size:16px;line-height:1.75;color:#2a2a2a;margin:20px 0;}
+  .post-body h2{font-family:'Space Grotesk',sans-serif;text-transform:none;font-weight:700;font-size:22px;letter-spacing:0;margin:36px 0 6px;}
+  .post-body strong{color:var(--ink);}
+  .post-body a{text-decoration:underline;text-decoration-color:var(--red);}
+  .post-body img{border-radius:10px;margin:20px 0;}
+  .post-body blockquote{border-left:4px solid var(--red);padding-left:18px;margin:28px 0;font-family:'Archivo Black',sans-serif;text-transform:none;font-size:19px;line-height:1.4;color:var(--ink);}
+  .back-link{display:inline-flex;align-items:center;gap:8px;margin:40px 0 10px;font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;text-decoration:none;color:var(--red);}
+  .back-link:hover{text-decoration:underline;}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="logo-mark" href="../index.html#top">
+      <img src="../img/logo-header.webp" alt="Entregallos & Co (có)">
+      <span>Entregallos&nbsp;&amp;&nbsp;Co (có)</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html#que-hacemos">Qué hacemos</a>
+      <a href="../index.html#juegos">Juegos</a>
+      <a href="../index.html#sobre">Nosotros</a>
+      <a href="../nido.html" style="border-color:var(--line);background:var(--ink);color:#fff;">El Nido</a>
+      <div class="nav-dropdown" id="gamesDropdown">
+        <button class="nav-dropdown-toggle" id="gamesToggle" type="button" aria-haspopup="true" aria-expanded="false">
+          Jugá ahora
+          <svg width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="nav-dropdown-menu">
+          <a href="../saga.html" target="_blank" rel="noopener">
+            <strong>SAGA</strong>
+            <em>Entrá a la app →</em>
+          </a>
+          <a href="https://entregallos.itch.io" target="_blank" rel="noopener">
+            <strong>Señora Royale</strong>
+            <em>Ver en itch.io →</em>
+          </a>
+          <span class="disabled-item">
+            <strong>Devotio</strong>
+            <em>Próximamente</em>
+          </span>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="post-hero">
+  <div class="wrap">
+    <div class="eyebrow">El Nido</div>
+    <h1>{{TITLE}}</h1>
+    <div class="post-meta">
+      <span>{{DATE_LONG}}</span>
+      <span>· {{AUTHOR}}</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="post-body">
+{{BODY}}
+
+    <a class="back-link" href="../nido.html">← Volver a El Nido</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">Entregallos & Co</div>
+      <div class="foot-links">
+        <a href="../index.html#que-hacemos">Qué hacemos</a>
+        <a href="../index.html#juegos">Juegos</a>
+        <a href="../index.html#sobre">Nosotros</a>
+        <a href="../nido.html">El Nido</a>
+        <a href="https://entregallos.itch.io" target="_blank" rel="noopener">itch.io</a>
+        <a href="https://www.instagram.com/entregallos.co/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Entregallos & Co. Todos los dados reservados.</span>
+      <span>@entregallos.co · entregallos.itch.io</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/nav.js"></script>
+</body>
+</html>
