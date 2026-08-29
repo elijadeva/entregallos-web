@@ -256,12 +256,19 @@
 <script>
   // redirige las invitaciones/confirmaciones de Netlify Identity al login,
   // así Eli y Bel pueden aceptar la invitación por mail y entrar directo a /admin.
+  // OJO: el widget dispara 'login' también cuando ya había una sesión activa
+  // (no solo al loguearse manualmente), así que solo escuchamos ese evento
+  // cuando la URL viene de un link de invitación/confirmación/recuperación.
+  // Si no, cualquier visita normal a la home con sesión iniciada te mandaría
+  // a /admin/ sin querer.
   if(window.netlifyIdentity){
     window.netlifyIdentity.on('init', function(user){});
-    window.netlifyIdentity.on('login', function(){
-      window.location.href = '/admin/';
-    });
-    if(window.location.hash && window.location.hash.indexOf('invite_token') > -1){
+    var hash = window.location.hash || '';
+    var isAuthLink = hash.indexOf('invite_token') > -1 || hash.indexOf('recovery_token') > -1 || hash.indexOf('confirmation_token') > -1;
+    if(isAuthLink){
+      window.netlifyIdentity.on('login', function(){
+        window.location.href = '/admin/';
+      });
       window.netlifyIdentity.open();
     }
   }
