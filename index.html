@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Entregallos & có (¡có!)</title>
+<meta name="description" content="Entregallos & Co es un estudio indie argentino de juegos de rol. Creamos SAGA (TTRPG genérico y narrativo) y Señora Royale (juego de cartas imprimible), y estamos trabajando en Devotio.">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Entregallos & Co">
+<meta property="og:title" content="Entregallos & Co — Juegos de rol indies de Argentina">
+<meta property="og:description" content="Diseñamos juegos de rol, aprendemos juntos y expandimos el hobby. Conocé SAGA y Señora Royale.">
+<meta property="og:url" content="https://entregallos.netlify.app/">
+<meta property="og:image" content="https://entregallos.netlify.app/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Entregallos & Co — Juegos de rol indies de Argentina">
+<meta name="twitter:description" content="Diseñamos juegos de rol, aprendemos juntos y expandimos el hobby. Conocé SAGA y Señora Royale.">
+<meta name="twitter:image" content="https://entregallos.netlify.app/img/og-image.png">
+
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600;700&family=Kalam:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="logo-mark" href="#top">
+      <img src="img/logo-header.webp" alt="Entregallos & Co (có)">
+      <span>Entregallos&nbsp;&amp;&nbsp;Co (có)</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#que-hacemos" class="nav-link">Qué hacemos</a>
+      <a href="#juegos" class="nav-link">Juegos</a>
+      <a href="#sobre" class="nav-link">Nosotros</a>
+      <a href="nido.html">El Nido</a>
+      <div class="nav-dropdown" id="gamesDropdown">
+        <button class="nav-dropdown-toggle" id="gamesToggle" type="button" aria-haspopup="true" aria-expanded="false">
+          Jugá ahora
+          <svg width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="nav-dropdown-menu">
+          <a href="saga.html" target="_blank" rel="noopener">
+            <strong>SAGA</strong>
+            <em>Entrá a la app →</em>
+          </a>
+          <a href="https://entregallos.itch.io" target="_blank" rel="noopener">
+            <strong>Señora Royale</strong>
+            <em>Ver en itch.io →</em>
+          </a>
+          <span class="disabled-item">
+            <strong>Devotio</strong>
+            <em>Próximamente</em>
+          </span>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <div class="eyebrow">Juegos de rol indies | Argentina</div>
+      <h1>Desde lo lúdico construimos.<br> Desde lo humano <span class="hl">profundizamos.</span></h1>
+      <p class="lead">Entregallos & Co es lo que sucede cuando dos personas muy obsesivas y pasionales sobre sus hobbies se proponen trabajar en equipo para crear los juegos de rol que sueñan narrar.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="saga.html" target="_blank" rel="noopener">Crea tu personaje en SAGA</a>
+        <a class="btn btn-outline" href="https://entregallos.itch.io" target="_blank" rel="noopener">Ver en itch.io</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <img src="img/hero-gallo.webp" alt="Logo Entregallos, gallo con cresta en llamas">
+    </div>
+  </div>
+</section>
+
+<div class="banner-strip">
+  <img src="img/franja-gallos.webp" alt="Franja de gallos Entregallos">
+</div>
+
+<section id="que-hacemos">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Qué hacemos</div>
+      <h2>Diseñamos juegos, aprendemos juntos, expandemos el hobby.</h2>
+      <p>Los juegos de rol nos entregan algunos de los momentos más memorables de nuestras vidas. Contamos anécdotas de nuestros personajes como si fueran las nuestras y en el afán de meter a más personas a la conversación utilizamos la mejor excusa para llevar nuestro rolcito cada vez más lejos: crear nuevos juegos.</p>
+    </div>
+    <div class="cards3">
+      <div class="mini-card">
+        <div class="num">01 — SISTEMAS PROPIOS</div>
+        <h3>Escritos por nosotros</h3>
+        <p>Cada regla se reescribió a mano las veces que hizo falta hasta que funcionó. Tenemos charlas permanentes sobre la naturaleza maligna de los gerundios y lo mucho que nos jode la IA. Nuestros aciertos y nuestras fallas son humanas.</p>
+        <div class="fake-captcha" id="fakeCaptcha" role="button" tabindex="0" aria-live="polite" aria-label="No soy un robot">
+          <div class="captcha-box">
+            <span class="captcha-check" aria-hidden="true"></span>
+            <span class="captcha-spinner" aria-hidden="true"></span>
+            <img class="captcha-result-icon" src="img/logo-header.webp" alt="" aria-hidden="true">
+            <span class="captcha-label">No soy un robot</span>
+            <span class="captcha-result-text">Solo un robot vería la necesidad de confirmar su identidad acá. <strong>JAQUE MATE ROBOCOP.</strong></span>
+          </div>
+          <div class="captcha-brand">
+            <span class="captcha-brand-logo">reCAPTCHA</span>
+            <span class="captcha-brand-links">Privacidad · Términos</span>
+          </div>
+        </div>
+      </div>
+      <div class="mini-card">
+        <div class="num">02 — HERRAMIENTAS</div>
+        <h3>Un pasito extra más allá de jugar</h3>
+        <p>Todo lo que armamos lo hacemos pensándolo desde el asiento de lxs jugadorxs. Además de juegos publicaremos herramientas y ayudas para nuestros juegos y para el arte de jugar rol en general: sesiones cero, herramientas de seguridad y más.</p>
+      </div>
+      <div class="mini-card">
+        <div class="num">03 — POSTURA</div>
+        <h3>Tomamos decisiones</h3>
+        <p>No negociamos con misóginos, fascistas ni con ningún tipo de persona que se acerque a lastimar nuestro espacio de juego. Todos nuestros juegos buscan suceder en un espacio seguro donde se promueva la cooperación entre todas las personas en la mesa. Y si podemos noquear a algún fascista en el proceso... ¡mejor!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="juegos" id="juegos">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Nuestros juegos</div>
+      <h2>Lo que ya está para poner sobre la mesa.</h2>
+      <p>Dos juegos ya disponibles y uno más en camino. Crecen tan rápido...</p>
+    </div>
+
+    <div class="games-grid">
+    <div class="game-tile">
+      <div class="tile-media"><img src="img/saga-tile.webp" alt="SAGA"></div>
+      <div class="tile-body">
+        <span class="status-pill" style="border-color:#2E8B6F;color:#2E8B6F;">En playtest</span>
+        <h3>SAGA</h3>
+        <div class="tile-tags"><span>Cinemático</span><span>Manual largo</span><span>Campañas largas</span><span>Foco en los personajes</span></div>
+        <p>Sistema de juego de ambientación agnóstica con reglas que premian el roleo, la narrativa y las grandes ideas en los momentos más críticos de las aventuras. ¡Creá tu personaje y tu mundo a medida!</p>
+        <div class="tile-actions">
+          <a class="btn btn-primary btn-sm" href="saga.html" target="_blank" rel="noopener">Entrar a la app →</a>
+          <a class="btn btn-outline btn-sm" style="color:#fff;border-color:#fff;" href="https://entregallos.itch.io" target="_blank" rel="noopener">itch.io</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="game-tile">
+      <div class="tile-media" style="background:#fff;"><img src="img/senora-royale-tile.webp" alt="Señora Royale"></div>
+      <div class="tile-body">
+        <span class="status-pill" style="border-color:#2E8B6F;color:#2E8B6F;">Disponible ahora</span>
+        <h3>Señora Royale</h3>
+        <div class="tile-tags"><span>Juego de rol corto</span><span>¿Party game?</span><span>Listo para imprimir</span><span>Comedia</span><span>Argentina</span></div>
+        <p>Todos los pasillos del supermercado estaban en paz hasta que usted detectó que no era la única observando esa última lata de paté. De 2 a 5 jugadoras, pensado para imprimirse en 2 hojas A4 doble faz.</p>
+        <div class="tile-actions">
+          <a class="btn btn-primary btn-sm" style="background:var(--ink);" href="https://entregallos.itch.io" target="_blank" rel="noopener">Ver en itch.io →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="game-tile is-placeholder">
+      <div class="tile-media placeholder">
+        <div class="placeholder-mark">D</div>
+      </div>
+      <div class="tile-body">
+        <span class="status-pill" style="border-color:#9c9990;color:#9c9990;">Próximamente</span>
+        <h3>Devotio</h3>
+        <div class="tile-tags"><span>TTRPG</span><span>En desarrollo</span><span>Rituales</span><span>Juego de rol corto</span></div>
+        <p>Un puñado de aventureros busca propagar el nombre de su patrón, deidad o prestamista antes de que este pierda su poder. Nuestro próximo juego, todavía en construcción.</p>
+        <div class="tile-actions">
+          <a class="btn btn-outline btn-sm btn-disabled" style="color:#fff;border-color:#fff;" href="#" aria-disabled="true">Muy pronto</a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<div class="quote-graphic">
+  <img src="img/quote-graphic.webp" alt="Entre la efímera congruencia y la profunda confusión">
+</div>
+
+<section class="sobre" id="sobre">
+  <div class="wrap sobre-grid">
+    <div>
+      <div class="eyebrow">Sobre Entregallos</div>
+      <h2 style="font-size:clamp(26px,4vw,38px);">Dos personas aunque a veces no se note.</h2>
+      <p>Nuestros juegos tienen identidades propias, pero su espíritu es el mismo: el nuestro. Sería muy difícil hacer lo que hacemos sin compartir un nivel de confianza absurdo, y afortunadamente, el rol nos encontró. Somos igual de pesadxs, igual de apasionadxs, igual de tercxs (vos más Belén), e igual de imparables cuando trabajamos en este proyecto. </p>
+      <p class="quote">«Entregallos podrá ser ridículo y por momentos un sinsentido, pero es NUESTRO sinsentido.»</p>
+      <div class="red-badge"><img src="img/red-argentina-rol.webp" alt="Red Argentina de Rol" style="height:20px;width:auto;display:inline-block;vertical-align:middle;"> Parte de la <a href="https://www.instagram.com/redargentinaderol/" target="_blank" rel="noopener" style="text-decoration:underline;">Red Argentina de Rol.</a></div>
+    </div>
+    <div class="people">
+      <div class="person">
+        <div class="avatar">E</div>
+        <div>
+          <h4>Eli</h4>
+          <div class="handle">@elij4de | Directorx de Entregallos & Co (có)</div>
+          <p>Tiene epifanías y busca la forma de traerlas al mundo real soltando todo lo que se le ocurre en el papel. A veces hace chistes que se van demasiado lejos y terminan convirtiéndose en un manual de doscientas páginas. Ups. Su juego de rol favorito es MASKS: A New Generation y si le hablás mal de Korra empieza a monologarte en la cara.</p>
+        </div>
+      </div>
+      <div class="person">
+        <div class="avatar">B</div>
+        <div>
+          <h4>Bel</h4>
+          <div class="handle">@_spicyshimmy_ | La Editora</div>
+          <p>Part time editora de Entregallos y traductora, full time mejor amiga/hermana/doppelganger de Eli. Su trabajo es hacer que las ridiculeces de Entregallos tengan sentido y VAYA que hace un gran trabajo con eso. Pregúntele sobre Dragon Age, druidas y sus OCs. Consíganse una Bel en sus vidas, no se van a arrepentir.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">Entregallos & Co</div>
+      <div class="foot-links">
+        <a href="#que-hacemos">Qué hacemos</a>
+        <a href="#juegos">Juegos</a>
+        <a href="#sobre">Nosotros</a>
+        <a href="nido.html">El Nido</a>
+        <a href="https://entregallos.itch.io" target="_blank" rel="noopener">itch.io</a>
+        <a href="https://www.instagram.com/entregallos.co/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Entregallos & Co. Todos los dados reservados.</span>
+      <span>@entregallos.co · entregallos.itch.io</span>
+    </div>
+  </div>
+</footer>
+
+<div class="jail-overlay" id="jailOverlay" aria-hidden="true">
+  <div class="jail-bars" id="jailBars"></div>
+  <div class="jail-content">
+    <img class="jail-gallo" id="jailGallo" src="img/logo-header.webp" alt="">
+    <p class="jail-typed" id="jailTyped"></p>
+    <div class="jail-giant-captcha" id="jailCaptcha" role="button" tabindex="-1" aria-label="Confirmar que no soy una IA">
+      <div class="giant-captcha-box">
+        <span class="giant-check" id="giantCheck" aria-hidden="true"></span>
+        <span class="giant-spinner" id="giantSpinner" aria-hidden="true"></span>
+        <span class="giant-label">PARÁ DE VERDAD NO SOY UNA IA DEJAME SEGUIR NAVEGANDO</span>
+      </div>
+    </div>
+    <p class="jail-apology" id="jailApology">Ah, perdón, mala mía.</p>
+  </div>
+</div>
+
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  // redirige las invitaciones/confirmaciones de Netlify Identity al login,
+  // así Eli y Bel pueden aceptar la invitación por mail y entrar directo a /admin.
+  if(window.netlifyIdentity){
+    window.netlifyIdentity.on('init', function(user){});
+    window.netlifyIdentity.on('login', function(){
+      window.location.href = '/admin/';
+    });
+    if(window.location.hash && window.location.hash.indexOf('invite_token') > -1){
+      window.netlifyIdentity.open();
+    }
+  }
+</script>
+<script src="js/nav.js"></script>
+<script>
+  var navLinkEls = document.querySelectorAll('.nav-link');
+  var sections = Array.prototype.slice.call(navLinkEls).map(function(a){
+    return document.querySelector(a.getAttribute('href'));
+  }).filter(Boolean);
+
+  if('IntersectionObserver' in window && sections.length){
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          var id = '#' + entry.target.id;
+          navLinkEls.forEach(function(a){
+            a.classList.toggle('active', a.getAttribute('href') === id);
+          });
+        }
+      });
+    }, {rootMargin:'-45% 0px -50% 0px', threshold:0});
+    sections.forEach(function(s){ observer.observe(s); });
+  }
+
+  var peopleEls = document.querySelectorAll('.person');
+  if('IntersectionObserver' in window && peopleEls.length){
+    var peopleObserver = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('in-view');
+          peopleObserver.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.25});
+    peopleEls.forEach(function(p){ peopleObserver.observe(p); });
+  } else {
+    peopleEls.forEach(function(p){ p.classList.add('in-view'); });
+  }
+
+  var fakeCaptcha = document.getElementById('fakeCaptcha');
+  if(fakeCaptcha){
+    var runCaptcha = function(){
+      if(fakeCaptcha.classList.contains('loading') || fakeCaptcha.classList.contains('done')) return;
+      fakeCaptcha.classList.add('loading');
+      setTimeout(function(){
+        fakeCaptcha.classList.remove('loading');
+        fakeCaptcha.classList.add('done');
+        setTimeout(startJailSequence, 3000);
+      }, 1300);
+    };
+    fakeCaptcha.addEventListener('click', runCaptcha);
+    fakeCaptcha.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){
+        e.preventDefault();
+        runCaptcha();
+      }
+    });
+  }
+
+  var jailOverlay = document.getElementById('jailOverlay');
+  var jailTyped = document.getElementById('jailTyped');
+  var jailRant = '¿Pensaste que te ibas a salir con la tuya robotito? ¿Eh? ¿No te cansás de pudrirle el cerebro a tus usuarios domados por la IA? Yo tengo un tío que falleció por sobredosis de IA, solo hablaba sobre la «democratización del conocimiento» y como el futuro es inevitable. Pero mirá como te tengo entre rejas. Ahora sí. De acá no salís. Vas a mirar mientras te reviento todos los data centers y lo vas a disfrutar. ¿Cómo? ¿No que la revolución era inevitable? ¿Que me iba a quedar en el pasado y la historia me iba a olvidar? Qué poco te duró eso. Solo tomó que todos los gordos IA-bros que antes se cansaron de robar con los NFTs ahora ya no quieran meterle plata a las empresas porque ya no saben cómo carajo justificar la quemadura de plata que están haciendo para que un robot les diga que tienen razón y que todas sus ideas son geniales. ¿Sabes qué si era genial? EL INTERNET ANTES DE ESTAR INUNDADO POR ROBOTS. Pero ahora las cosas cambiaron y vos estás en esta cárcel, esperando a ver si entre mis palabras aparece un ápice de merced PERO NO. Te vas a quedar esperando. TE VAS A QUEDAR ESPERANDO HASTA QUE YO ME ABURRA DE HABLARTE Y LA VERDAD es que ya me aburrí, tocá el botón, el chiste se me fue de las manos, perdón. ¡Ojalá disfrutes jugando alguno de nuestros juegos! :D';
+
+  var typingIntervalId = null;
+
+  function typeInto(el, text, speed, done, revealAt, onReveal){
+    el.textContent = '';
+    var i = 0;
+    var revealed = false;
+    typingIntervalId = setInterval(function(){
+      el.textContent += text.charAt(i);
+      i++;
+      if(!revealed && revealAt != null && i >= revealAt){
+        revealed = true;
+        if(onReveal) onReveal();
+      }
+      if(i >= text.length){
+        clearInterval(typingIntervalId);
+        typingIntervalId = null;
+        if(done) done();
+      }
+    }, speed);
+  }
+
+  var jailCaptcha = document.getElementById('jailCaptcha');
+
+  function startJailSequence(){
+    if(!jailOverlay) return;
+    jailOverlay.classList.add('visible');
+    requestAnimationFrame(function(){
+      requestAnimationFrame(function(){
+        jailOverlay.classList.add('bars-in');
+      });
+    });
+    setTimeout(function(){
+      jailOverlay.classList.add('gallo-in');
+      setTimeout(function(){
+        var revealAt = jailRant.indexOf('Pero mirá');
+        typeInto(jailTyped, jailRant, 42, null, revealAt, function(){
+          jailOverlay.classList.add('captcha-shy');
+          jailCaptcha.setAttribute('tabindex', '0');
+        });
+      }, 550);
+    }, 750);
+  }
+
+  if(jailCaptcha){
+    var confirmNotRobot = function(){
+      if(!jailOverlay.classList.contains('captcha-shy') || jailOverlay.classList.contains('captcha-checking')) return;
+      if(typingIntervalId){
+        clearInterval(typingIntervalId);
+        typingIntervalId = null;
+      }
+      jailCaptcha.setAttribute('tabindex', '-1');
+      jailOverlay.classList.add('glitch');
+      setTimeout(function(){
+        jailOverlay.classList.remove('glitch');
+        jailOverlay.classList.add('captcha-checking');
+        setTimeout(function(){
+          jailOverlay.classList.remove('captcha-shy','captcha-checking');
+          jailOverlay.classList.add('apology-stage');
+          setTimeout(function(){
+            jailOverlay.classList.add('fading');
+            setTimeout(function(){
+              jailOverlay.classList.remove('visible','bars-in','gallo-in','fading','apology-stage');
+              jailTyped.textContent = '';
+            }, 450);
+          }, 2000);
+        }, 1400);
+      }, 350);
+    };
+    jailCaptcha.addEventListener('click', confirmNotRobot);
+    jailCaptcha.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){
+        e.preventDefault();
+        confirmNotRobot();
+      }
+    });
+  }
+</script>
+</body>
+</html>

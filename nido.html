@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Nido — Entregallos & có (¡có!)</title>
+<meta name="description" content="Notas, tutoriales y devlogs de Entregallos & Co: cómo diseñamos SAGA, Señora Royale y Devotio, y lo que vamos aprendiendo en el camino.">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Entregallos & Co">
+<meta property="og:title" content="El Nido — Entregallos & Co">
+<meta property="og:description" content="Notas, tutoriales y devlogs sobre cómo diseñamos nuestros juegos de rol.">
+<meta property="og:url" content="https://entregallos.netlify.app/nido.html">
+<meta property="og:image" content="https://entregallos.netlify.app/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="El Nido — Entregallos & Co">
+<meta name="twitter:description" content="Notas, tutoriales y devlogs sobre cómo diseñamos nuestros juegos de rol.">
+<meta name="twitter:image" content="https://entregallos.netlify.app/img/og-image.png">
+
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600;700&family=Kalam:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<style>
+  .blog-hero{background:var(--ink);border-bottom:3px solid var(--line);padding:64px 0 52px;}
+  .blog-hero .eyebrow{color:var(--red-bright);}
+  .blog-hero h1{color:#fff;font-size:clamp(30px,5vw,50px);margin-top:12px;max-width:16ch;}
+  .blog-hero p{color:#D9D6CE;font-size:16px;max-width:52ch;margin-top:16px;line-height:1.6;}
+
+  .post-list{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:8px;}
+  @media (max-width:720px){.post-list{grid-template-columns:1fr;}}
+  .post-card{display:flex;flex-direction:column;gap:10px;border:2px solid var(--line);border-radius:14px;padding:24px;background:#fff;box-shadow:var(--shadow-sm);text-decoration:none;color:inherit;transition:transform .18s ease,box-shadow .18s ease;}
+  .post-card:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink);}
+  .post-card:active{transform:translate(0,0);box-shadow:var(--shadow-sm);}
+  .post-date{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--red);font-weight:700;}
+  .post-card h2{font-family:'Space Grotesk',sans-serif;font-weight:700;text-transform:none;font-size:19px;letter-spacing:0;margin-top:2px;}
+  .post-card p{font-size:14px;color:#3a3a3a;line-height:1.6;}
+  .post-read{margin-top:auto;padding-top:6px;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;}
+
+  .post-card.is-empty{background:repeating-linear-gradient(135deg,#f2f1ec,#f2f1ec 12px,#e9e7df 12px,#e9e7df 24px);border-style:dashed;box-shadow:none;color:#6a6a6a;pointer-events:none;}
+  .post-card.is-empty:hover{transform:none;}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="logo-mark" href="index.html#top">
+      <img src="img/logo-header.webp" alt="Entregallos & Co (có)">
+      <span>Entregallos&nbsp;&amp;&nbsp;Co (có)</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html#que-hacemos">Qué hacemos</a>
+      <a href="index.html#juegos">Juegos</a>
+      <a href="index.html#sobre">Nosotros</a>
+      <a href="nido.html" style="border-color:var(--line);background:var(--ink);color:#fff;">El Nido</a>
+      <div class="nav-dropdown" id="gamesDropdown">
+        <button class="nav-dropdown-toggle" id="gamesToggle" type="button" aria-haspopup="true" aria-expanded="false">
+          Jugá ahora
+          <svg width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="nav-dropdown-menu">
+          <a href="saga.html" target="_blank" rel="noopener">
+            <strong>SAGA</strong>
+            <em>Entrá a la app →</em>
+          </a>
+          <a href="https://entregallos.itch.io" target="_blank" rel="noopener">
+            <strong>Señora Royale</strong>
+            <em>Ver en itch.io →</em>
+          </a>
+          <span class="disabled-item">
+            <strong>Devotio</strong>
+            <em>Próximamente</em>
+          </span>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="blog-hero">
+  <div class="wrap">
+    <div class="eyebrow">El Nido</div>
+    <h1>Notas, tutoriales y todo lo que vamos aprendiendo en el camino.</h1>
+    <p>Un registro de cómo armamos nuestros juegos, decisiones de diseño, y algún que otro paper sobre juegos de rol que nos vuela la cabeza.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="post-list">
+<!--POSTS:START-->
+      <a class="post-card" href="nido/bienvenida-a-el-nido.html">
+        <span class="post-date">28 ago 2026</span>
+        <h2>Bienvenida a El Nido</h2>
+        <p>Por qué abrimos esta sección, qué van a encontrar acá, y un adelanto de lo primero que vamos a contar sobre SAGA.</p>
+        <span class="post-read">Leer →</span>
+      </a>
+<!--POSTS:END-->
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">Entregallos & Co</div>
+      <div class="foot-links">
+        <a href="index.html#que-hacemos">Qué hacemos</a>
+        <a href="index.html#juegos">Juegos</a>
+        <a href="index.html#sobre">Nosotros</a>
+        <a href="nido.html">El Nido</a>
+        <a href="https://entregallos.itch.io" target="_blank" rel="noopener">itch.io</a>
+        <a href="https://www.instagram.com/entregallos.co/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Entregallos & Co. Todos los dados reservados.</span>
+      <span>@entregallos.co · entregallos.itch.io</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/nav.js"></script>
+</body>
+</html>
