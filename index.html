@@ -31,6 +31,21 @@
 </head>
 <body>
 
+<div class="intro-splash" id="introSplash" aria-hidden="true">
+  <video class="intro-video" id="introVideo" src="video/entregallos-intro.mp4" poster="img/intro-poster.jpg" muted playsinline preload="auto"></video>
+  <button class="intro-skip" id="introSkip" type="button">Saltar</button>
+</div>
+<script>
+  // Si ya se vio en esta sesión de navegador, lo sacamos antes de que
+  // llegue a pintarse (nada de flash del splash en cada página nueva
+  // del mismo sitio).
+  try{
+    if(sessionStorage.getItem('entregallos_intro_seen')){
+      document.getElementById('introSplash').style.display = 'none';
+    }
+  }catch(e){}
+</script>
+
 <header class="topbar">
   <div class="topbar-inner">
     <a class="logo-mark" href="#top">
@@ -275,6 +290,45 @@
 </script>
 <script src="js/nav.js"></script>
 <script>
+  // Splash de entrada (el loader del gallo). Se muestra una vez por
+  // sesión de navegador, se puede saltar, y si el video no llega a
+  // cargar por algún motivo, se saca solo a los pocos segundos: nunca
+  // debe trabar a nadie.
+  (function(){
+    var splash = document.getElementById('introSplash');
+    if(!splash || splash.style.display === 'none') return;
+
+    var video = document.getElementById('introVideo');
+    var skipBtn = document.getElementById('introSkip');
+    var dismissed = false;
+
+    function markSeen(){
+      try{ sessionStorage.setItem('entregallos_intro_seen', '1'); }catch(e){}
+    }
+
+    function dismiss(){
+      if(dismissed) return;
+      dismissed = true;
+      markSeen();
+      splash.classList.add('hidden');
+      setTimeout(function(){ splash.style.display = 'none'; }, 550);
+    }
+
+    setTimeout(function(){ splash.classList.add('skip-ready'); }, 400);
+
+    skipBtn.addEventListener('click', dismiss);
+    video.addEventListener('ended', dismiss);
+
+    // Red de seguridad: conexión lenta, video que no carga, autoplay
+    // bloqueado, lo que sea — a los 6s se saca solo.
+    setTimeout(dismiss, 6000);
+
+    var playPromise = video.play();
+    if(playPromise && playPromise.catch){
+      playPromise.catch(function(){ dismiss(); });
+    }
+  })();
+
   var navLinkEls = document.querySelectorAll('.nav-link');
   var sections = Array.prototype.slice.call(navLinkEls).map(function(a){
     return document.querySelector(a.getAttribute('href'));
