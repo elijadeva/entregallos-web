@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAGA — Entregallos & có (¡có!)</title>
+<meta name="description" content="SAGA: sistema de juego de rol de mesa, cinemático y narrativo, de ambientación agnóstica. Creá tu personaje y tu mundo a medida.">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Entregallos & Co">
+<meta property="og:title" content="SAGA — Entregallos & Co">
+<meta property="og:description" content="Creá tu propia SAGA y viví aventuras inolvidables con tus amigos. Sistema narrativo y agnóstico, en playtest.">
+<meta property="og:url" content="https://entregallos.netlify.app/saga-info.html">
+<meta property="og:image" content="https://entregallos.netlify.app/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SAGA — Entregallos & Co">
+<meta name="twitter:description" content="Creá tu propia SAGA y viví aventuras inolvidables con tus amigos. Sistema narrativo y agnóstico, en playtest.">
+<meta name="twitter:image" content="https://entregallos.netlify.app/img/og-image.png">
+
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600;700&family=Kalam:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<style>
+  .game-hero{background:var(--ink);border-bottom:3px solid var(--line);padding:56px 0 48px;color:#fff;}
+  .game-hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;}
+  @media (max-width:820px){.game-hero-inner{grid-template-columns:1fr;}}
+  .game-hero .eyebrow{color:var(--red-bright);}
+  .game-hero h1{font-size:clamp(30px,5vw,46px);margin-top:10px;}
+  .game-hero .tagline{color:#D9D6CE;font-size:16.5px;line-height:1.6;margin-top:14px;max-width:46ch;}
+  .game-hero .tile-tags{margin-top:16px;}
+  .game-hero .status-pill{margin-top:16px;}
+  .game-hero-actions{margin-top:24px;display:flex;flex-wrap:wrap;gap:12px;}
+  .game-cover{border:2px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:6px 6px 0 var(--red-bright);}
+  .game-cover img{display:block;width:100%;height:auto;}
+
+  .game-body{padding:56px 0;}
+  .game-body-grid{display:grid;grid-template-columns:2fr 1fr;gap:44px;align-items:start;}
+  @media (max-width:820px){.game-body-grid{grid-template-columns:1fr;}}
+  .game-copy h2{font-size:22px;margin-top:32px;margin-bottom:12px;}
+  .game-copy h2:first-child{margin-top:0;}
+  .game-copy p{font-size:15.5px;line-height:1.7;color:#3a3a3a;margin-top:10px;}
+  .game-copy p.quote{font-family:'Kalam',cursive;font-size:17px;color:var(--red);margin-top:16px;}
+
+  .game-sidebar{display:flex;flex-direction:column;gap:20px;}
+  .side-card{border:2px solid var(--line);border-radius:12px;padding:20px;background:#fff;box-shadow:var(--shadow-sm);}
+  .side-card h3{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--red);margin-bottom:12px;}
+  .side-card dl{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;font-size:13.5px;}
+  .side-card dt{color:#6a6a6a;}
+  .side-card dd{font-weight:600;}
+  .download-list{display:flex;flex-direction:column;gap:10px;}
+  .download-list a{display:flex;align-items:center;justify-content:space-between;gap:10px;border:2px solid var(--line);border-radius:8px;padding:11px 14px;font-size:13.5px;font-weight:700;text-decoration:none;color:var(--ink);transition:transform .15s ease,box-shadow .15s ease;}
+  .download-list a:hover{transform:translate(2px,2px);box-shadow:0 0 0 var(--ink);}
+  .back-link{display:inline-flex;align-items:center;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;text-transform:uppercase;letter-spacing:.05em;color:#D9D6CE;text-decoration:none;margin-bottom:18px;}
+  .back-link:hover{color:#fff;}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="logo-mark" href="index.html#top">
+      <img src="img/logo-header.webp" alt="Entregallos & Co (có)">
+      <span>Entregallos&nbsp;&amp;&nbsp;Co (có)</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html#que-hacemos">Qué hacemos</a>
+      <a href="index.html#juegos">Juegos</a>
+      <a href="index.html#sobre">Nosotros</a>
+      <a href="nido.html">El Nido</a>
+      <div class="nav-dropdown" id="gamesDropdown">
+        <button class="nav-dropdown-toggle" id="gamesToggle" type="button" aria-haspopup="true" aria-expanded="false">
+          Jugá ahora
+          <svg width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="nav-dropdown-menu">
+          <a href="saga-info.html" style="border-color:var(--line);background:var(--ink);color:#fff;">
+            <strong>SAGA</strong>
+            <em>Ver el juego →</em>
+          </a>
+          <a href="senora-royale.html">
+            <strong>Señora Royale</strong>
+            <em>Ver el juego →</em>
+          </a>
+          <a href="devotio.html">
+            <strong>Devotio</strong>
+            <em>Próximamente →</em>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="game-hero">
+  <div class="wrap">
+    <a class="back-link" href="index.html#juegos">← Volver a Nuestros juegos</a>
+    <div class="game-hero-inner">
+      <div>
+        <div class="eyebrow">SAGA</div>
+        <h1>Creá tu propia SAGA y viví aventuras inolvidables con tus amigos.</h1>
+        <p class="tagline">Sistema de juego de rol de mesa pensado para poner el énfasis en la narrativa. Reglas livianas y modulares que evitan la matemática compleja y los muros de texto, para que puedan disfrutar de sus personajes sin fricciones.</p>
+        <span class="status-pill" style="border-color:#2E8B6F;color:#2E8B6F;">En playtest</span>
+        <div class="tile-tags"><span>Cinemático</span><span>Manual largo</span><span>Campañas largas</span><span>Foco en los personajes</span><span>2d10</span><span>Sin IA</span></div>
+        <div class="game-hero-actions">
+          <a class="btn btn-primary" href="saga.html" target="_blank" rel="noopener">Crear personaje en la app →</a>
+          <a class="btn btn-outline" href="#detalles">Ver detalles</a>
+        </div>
+      </div>
+      <div class="game-cover">
+        <img src="img/saga-tile.webp" alt="SAGA">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="game-body" id="detalles">
+  <div class="wrap game-body-grid">
+    <div class="game-copy">
+      <h2>De qué se trata</h2>
+      <p>SAGA es un sistema de rol de mesa diseñado para poner el énfasis en la narrativa. Sus mecánicas evitan la matemática compleja y los muros de texto, dejando que jugadorxs y narradorxs se enfoquen en el roleo, la narrativa y las grandes ideas en los momentos más críticos de la aventura.</p>
+      <p>Funciona como un formato genérico, sin ambientación propia: pueden usar SAGA para aventuras medievales, futuristas, steampunk, espaciales, subterráneas, o cualquier mundo que se les ocurra narrar.</p>
+      <p class="quote">«SAGA es un juego de rol de mesa diseñado para poner el énfasis en la narrativa y la experiencia cinemática, con reglas livianas y modulares.»</p>
+      <h2>Creación de personajes</h2>
+      <p>La creación de personajes es modular, así que cada jugadorx puede armar exactamente el personaje que se imaginó. Además, quien narre tiene herramientas para crear especies, linajes y razas propias para su mundo.</p>
+      <h2>Estado del proyecto</h2>
+      <p>El juego se encuentra en etapa de playtest: cada partida que juegan y cada comentario que nos dejan nos ayuda a construir su versión final.</p>
+    </div>
+    <div class="game-sidebar">
+      <div class="side-card">
+        <h3>Ficha del juego</h3>
+        <dl>
+          <dt>Estado</dt><dd>En desarrollo</dd>
+          <dt>Categoría</dt><dd>Juego físico</dd>
+          <dt>Autoría</dt><dd>EliJade</dd>
+          <dt>Géneros</dt><dd>Acción, Aventura</dd>
+          <dt>IA generativa</dt><dd>No se usó</dd>
+        </dl>
+      </div>
+      <div class="side-card">
+        <h3>Recursos</h3>
+        <div class="download-list">
+          <a href="saga.html" target="_blank" rel="noopener">Crear personaje (app)</a>
+          <a href="https://docs.google.com/document/d/1lq8IolqJGveWItk629w7cj7qcpBadtnjIFQdj7P_LY4/edit?usp=sharing" target="_blank" rel="noopener">Manual completo (Google Docs)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">Entregallos & Co</div>
+      <div class="foot-links">
+        <a href="index.html#que-hacemos">Qué hacemos</a>
+        <a href="index.html#juegos">Juegos</a>
+        <a href="index.html#sobre">Nosotros</a>
+        <a href="nido.html">El Nido</a>
+        <a href="https://entregallos.itch.io" target="_blank" rel="noopener">itch.io</a>
+        <a href="https://www.instagram.com/entregallos.co/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Entregallos & Co. Todos los dados reservados.</span>
+      <span>@entregallos.co · entregallos.itch.io</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/nav.js"></script>
+</body>
+</html>
