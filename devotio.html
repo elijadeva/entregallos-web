@@ -4,19 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Devotio — Entregallos & có (¡có!)</title>
-<meta name="description" content="Devotio: nuestro próximo juego de rol, todavía en construcción. Un puñado de aventureros busca propagar el nombre de su patrón, deidad o prestamista.">
+<meta name="description" content="Devotio: convertí a otros en creyentes. Juego de rol corto de terror, listo para imprimir, para un narrador, una entidad y hasta tres fieles.">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Entregallos & Co">
 <meta property="og:title" content="Devotio — Entregallos & Co">
-<meta property="og:description" content="Nuestro próximo juego de rol, todavía en construcción.">
+<meta property="og:description" content="Convertí a otros en creyentes. Juego de rol corto de terror, listo para imprimir.">
 <meta property="og:url" content="https://entregallos.netlify.app/devotio.html">
 <meta property="og:image" content="https://entregallos.netlify.app/img/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Devotio — Entregallos & Co">
-<meta name="twitter:description" content="Nuestro próximo juego de rol, todavía en construcción.">
+<meta name="twitter:description" content="Convertí a otros en creyentes. Juego de rol corto de terror, listo para imprimir.">
 <meta name="twitter:image" content="https://entregallos.netlify.app/img/og-image.png">
 
 <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -29,14 +29,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600;700&family=Kalam:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/site.css">
 <style>
-  /*
-    ============================================================
-    TEMPLATE DE DEVOTIO — para completar a mano.
-    Copiá la estructura de saga-info.html / senora-royale.html
-    si querés agregar más secciones (créditos, descargas, etc).
-    Todo lo marcado con [EDITAR] es un placeholder para reemplazar.
-    ============================================================
-  */
   .game-hero{background:var(--ink);border-bottom:3px solid var(--line);padding:56px 0 48px;color:#fff;}
   .game-hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;}
   @media (max-width:820px){.game-hero-inner{grid-template-columns:1fr;}}
@@ -46,7 +38,7 @@
   .game-hero .tile-tags{margin-top:16px;}
   .game-hero .status-pill{margin-top:16px;}
   .game-hero-actions{margin-top:24px;display:flex;flex-wrap:wrap;gap:12px;}
-  .game-cover{border:2px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:6px 6px 0 var(--red-bright);background:repeating-linear-gradient(135deg,#f2f1ec,#f2f1ec 12px,#e9e7df 12px,#e9e7df 24px);min-height:260px;display:flex;align-items:center;justify-content:center;color:#9c9990;font-family:'IBM Plex Mono',monospace;font-size:13px;text-transform:uppercase;letter-spacing:.05em;text-align:center;padding:20px;}
+  .game-cover{border:2px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:6px 6px 0 var(--red-bright);}
   .game-cover img{display:block;width:100%;height:auto;}
 
   .game-body{padding:56px 0;}
@@ -62,9 +54,12 @@
   .side-card dl{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;font-size:13.5px;}
   .side-card dt{color:#6a6a6a;}
   .side-card dd{font-weight:600;}
+  .download-list{display:flex;flex-direction:column;gap:10px;}
+  .download-list a{display:flex;align-items:center;justify-content:space-between;gap:10px;border:2px solid var(--line);border-radius:8px;padding:11px 14px;font-size:13.5px;font-weight:700;text-decoration:none;color:var(--ink);transition:transform .15s ease,box-shadow .15s ease;}
+  .download-list a:hover{transform:translate(2px,2px);box-shadow:0 0 0 var(--ink);}
+  .download-pending{border:2px dashed #9c9990;border-radius:8px;padding:11px 14px;font-size:13px;color:#6a6a6a;font-family:'IBM Plex Mono',monospace;text-align:center;}
   .back-link{display:inline-flex;align-items:center;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;text-transform:uppercase;letter-spacing:.05em;color:#D9D6CE;text-decoration:none;margin-bottom:18px;}
   .back-link:hover{color:#fff;}
-  .edit-note{border:2px dashed var(--red-bright);border-radius:10px;padding:14px 16px;background:#fff5f5;color:var(--red);font-family:'IBM Plex Mono',monospace;font-size:12.5px;line-height:1.6;margin-bottom:28px;}
 </style>
 </head>
 <body>
@@ -97,7 +92,7 @@
           </a>
           <a href="devotio.html" style="border-color:var(--line);background:var(--ink);color:#fff;">
             <strong>Devotio</strong>
-            <em>Próximamente →</em>
+            <em>Ver el juego →</em>
           </a>
         </div>
       </div>
@@ -111,16 +106,16 @@
     <div class="game-hero-inner">
       <div>
         <div class="eyebrow">Devotio</div>
-        <h1>[EDITAR] Título / bajada corta del juego.</h1>
-        <p class="tagline">[EDITAR] Frase gancho de una línea, tipo la que aparece en itch.io debajo del título.</p>
-        <span class="status-pill" style="border-color:#9c9990;color:#9c9990;">Próximamente</span>
-        <div class="tile-tags"><span>TTRPG</span><span>En desarrollo</span><span>Rituales</span><span>Juego de rol corto</span></div>
+        <h1>Convertí a otros en creyentes.</h1>
+        <p class="tagline">Antes del primer amanecer existían ellos: los innombrables, los devorados por el olvido, templos que hoy son polvo en la memoria de nadie. Tienen desde esta noche hasta el amanecer para que su nombre vuelva a pronunciarse, o se hundirán juntos en la historia para siempre.</p>
+        <span class="status-pill" style="border-color:#2E8B6F;color:#2E8B6F;">En playtest</span>
+        <div class="tile-tags"><span>Juego de rol corto</span><span>Terror</span><span>Listo para imprimir</span><span>Rituales</span></div>
         <div class="game-hero-actions">
-          <a class="btn btn-outline btn-disabled" href="#" aria-disabled="true">Muy pronto</a>
+          <a class="btn btn-outline" href="#detalles">Ver detalles</a>
         </div>
       </div>
       <div class="game-cover">
-        [EDITAR] Poné acá img/devotio-tile.webp (o el nombre que le den a la portada) cuando la tengan.
+        <img src="img/devotio-tile.webp" alt="Devotio">
       </div>
     </div>
   </div>
@@ -129,28 +124,27 @@
 <section class="game-body" id="detalles">
   <div class="wrap game-body-grid">
     <div class="game-copy">
-      <div class="edit-note">Esto es un template. Reemplazá cada bloque [EDITAR] con el contenido real cuando lo tengan — la estructura (secciones, ficha, sidebar) queda igual que en saga-info.html y senora-royale.html para mantener consistencia visual en todo el sitio.</div>
       <h2>De qué se trata</h2>
-      <p>[EDITAR] Un puñado de aventureros busca propagar el nombre de su patrón, deidad o prestamista antes de que este pierda su poder. Nuestro próximo juego, todavía en construcción. Reemplazá este párrafo con la descripción completa cuando la tengan lista.</p>
+      <p>Un grupo de fieles tiene poco tiempo para expandir la palabra de su dios, patrón o prestamista. Deben cumplir una última misión antes de que salga el sol.</p>
       <h2>Cómo se juega</h2>
-      <p>[EDITAR] Contá acá la mecánica central, cantidad de jugadorxs, duración de sesión, formato (imprimible, digital, campaña larga, one-shot, etc).</p>
-      <h2>Estado del proyecto</h2>
-      <p>[EDITAR] En qué etapa está (diseño, playtest, arte, edición) y qué pueden esperar los que quieran seguir el desarrollo — por ejemplo, un link a El Nido si van a postear devlogs.</p>
+      <p>Se juega con un narrador, una entidad y entre uno y tres fieles, usando dados de seis caras: la entidad tiene 10d6, y cada personaje 2d6. Está pensado para imprimirse en tres hojas A4 doble faz. Ideal para una partida de rol corta, o para introducir a alguien que le guste el terror a los juegos de rol.</p>
+      <h2>Créditos</h2>
+      <p>Escrito por Eli Jade Gallo. Edición de Ana Belén Brusasca. Arte de <a href="https://hounskul.itch.io/" target="_blank" rel="noopener">Hounskull</a>, bajo licencia CC-BY 4.0.</p>
     </div>
     <div class="game-sidebar">
       <div class="side-card">
         <h3>Ficha del juego</h3>
         <dl>
-          <dt>Estado</dt><dd>[EDITAR]</dd>
-          <dt>Categoría</dt><dd>[EDITAR]</dd>
-          <dt>Autoría</dt><dd>EliJade</dd>
-          <dt>Géneros</dt><dd>[EDITAR]</dd>
-          <dt>IA generativa</dt><dd>No se usó</dd>
+          <dt>Estado</dt><dd>Publicado</dd>
+          <dt>Jugadorxs</dt><dd>2 a 4</dd>
+          <dt>Formato</dt><dd>Imprimible (3 A4 doble faz)</dd>
+          <dt>Categoría</dt><dd>Juego de rol</dd>
+          <dt>Autoría</dt><dd>Eli Jade Gallo</dd>
         </dl>
       </div>
       <div class="side-card">
-        <h3>Seguí el desarrollo</h3>
-        <p style="font-size:13px;color:#3a3a3a;line-height:1.6;">[EDITAR] Cuando quieran, agreguen acá un link a un post de El Nido o a redes para que la gente siga el progreso.</p>
+        <h3>Descargas</h3>
+        <div class="download-pending">Muy pronto</div>
       </div>
     </div>
   </div>
